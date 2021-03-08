@@ -1,0 +1,10 @@
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\obs-glimesh-service.json
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Glimesh OBS Ingest Pinger.exe.config
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Glimesh OBS Ingest Pinger.exe
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Glimesh OBS Ingest Pinger.pdb
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.csproj.CoreCompileInputs.cache
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.csproj.CopyComplete
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.exe
+C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.pdb
