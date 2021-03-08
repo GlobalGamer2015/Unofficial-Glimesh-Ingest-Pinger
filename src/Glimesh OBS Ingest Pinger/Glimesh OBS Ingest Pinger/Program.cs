@@ -5,6 +5,8 @@ using System.Net.NetworkInformation;
 using Newtonsoft.Json.Linq;
 using System.IO;
 using System.Text;
+using System.Net;
+using System.Diagnostics;
 
 namespace Glimesh_OBS_Ingest_Pinger
 {
@@ -21,8 +23,7 @@ namespace Glimesh_OBS_Ingest_Pinger
         {
             try
             {
-                //var json = new WebClient().DownloadString("https://glimesh-static-assets.nyc3.digitaloceanspaces.com/obs-glimesh-service.json");
-                var json = File.ReadAllText(@"obs-glimesh-service.json");
+                var json = new WebClient().DownloadString("https://glimesh-static-assets.nyc3.digitaloceanspaces.com/obs-glimesh-service.json");
                 JObject root = JObject.Parse(json);
                 var server_url = root["servers"].Children()["url"];
 
@@ -30,118 +31,49 @@ namespace Glimesh_OBS_Ingest_Pinger
                 foreach (var address in server_url)
                 {
                     pingTasks.Add(PingAsync(address.ToString()));
-                    string url = address.ToString();
                 }
 
                 //Wait for all the tasks to complete
                 Task.WaitAll(pingTasks.ToArray());
 
                 //Now you can iterate over your list of pingTasks
-                int x = 0;
+                int x = -1;
                 foreach (var pingTask in pingTasks)
                 {
                     //pingTask.Result is whatever type T was declared in PingAsync
-                    int server = (x = x + 1);
-                    if(server == 1)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(" Server: North America - Chicago, United States");
-                        Console.WriteLine(" Status: " + pingTask.Result.Status);
-                        Console.WriteLine(" Roundtrip Time: " + pingTask.Result.RoundtripTime);
-                        Console.WriteLine(" Time to live: " + pingTask.Result.Options.Ttl);
-                        Console.WriteLine(" Buffer size: " + pingTask.Result.Buffer.Length);
-                        Console.ResetColor();
-                    }
-                    if (server == 2)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(" Server: North America - New York, United States");
-                        Console.WriteLine(" Status: " + pingTask.Result.Status);
-                        Console.WriteLine(" Roundtrip Time: " + pingTask.Result.RoundtripTime);
-                        Console.WriteLine(" Time to live: " + pingTask.Result.Options.Ttl);
-                        Console.WriteLine(" Buffer size: " + pingTask.Result.Buffer.Length);
-                        Console.ResetColor();
-                    }
-                    if (server == 3)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(" Server: North America - San Francisco, United States");
-                        Console.WriteLine(" Status: " + pingTask.Result.Status);
-                        Console.WriteLine(" Roundtrip Time: " + pingTask.Result.RoundtripTime);
-                        Console.WriteLine(" Time to live: " + pingTask.Result.Options.Ttl);
-                        Console.WriteLine(" Buffer size: " + pingTask.Result.Buffer.Length);
-                        Console.ResetColor();
-                    }
-                    if (server == 4)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(" Server: North America - Toronto, Canada");
-                        Console.WriteLine(" Status: " + pingTask.Result.Status);
-                        Console.WriteLine(" Roundtrip Time: " + pingTask.Result.RoundtripTime);
-                        Console.WriteLine(" Time to live: " + pingTask.Result.Options.Ttl);
-                        Console.WriteLine(" Buffer size: " + pingTask.Result.Buffer.Length);
-                        Console.ResetColor();
-                    }
-                    if (server == 5)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(" Server: Europe - Amsterdam, Netherlands");
-                        Console.WriteLine(" Status: " + pingTask.Result.Status);
-                        Console.WriteLine(" Roundtrip Time: " + pingTask.Result.RoundtripTime);
-                        Console.WriteLine(" Time to live: " + pingTask.Result.Options.Ttl);
-                        Console.WriteLine(" Buffer size: " + pingTask.Result.Buffer.Length);
-                        Console.ResetColor();
-                    }
-                    if (server == 6)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(" Server: Europe - Frankfurt, Germany");
-                        Console.WriteLine(" Status: " + pingTask.Result.Status);
-                        Console.WriteLine(" Roundtrip Time: " + pingTask.Result.RoundtripTime);
-                        Console.WriteLine(" Time to live: " + pingTask.Result.Options.Ttl);
-                        Console.WriteLine(" Buffer size: " + pingTask.Result.Buffer.Length);
-                        Console.ResetColor();
-                    }
-                    if (server == 7)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(" Server: Europe - London, United Kingdom");
-                        Console.WriteLine(" Status: " + pingTask.Result.Status);
-                        Console.WriteLine(" Roundtrip Time: " + pingTask.Result.RoundtripTime);
-                        Console.WriteLine(" Time to live: " + pingTask.Result.Options.Ttl);
-                        Console.WriteLine(" Buffer size: " + pingTask.Result.Buffer.Length);
-                        Console.ResetColor();
-                    }
-                    if (server == 8)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(" Server: Asia - Bangalore, India");
-                        Console.WriteLine(" Status: " + pingTask.Result.Status);
-                        Console.WriteLine(" Roundtrip Time: " + pingTask.Result.RoundtripTime);
-                        Console.WriteLine(" Time to live: " + pingTask.Result.Options.Ttl);
-                        Console.WriteLine(" Buffer size: " + pingTask.Result.Buffer.Length);
-                        Console.ResetColor();
-                    }
-                    if (server == 9)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine(" Server: Asia - Singapore");
-                        Console.WriteLine(" Status: " + pingTask.Result.Status);
-                        Console.WriteLine(" Roundtrip Time: " + pingTask.Result.RoundtripTime);
-                        Console.WriteLine(" Time to live: " + pingTask.Result.Options.Ttl);
-                        Console.WriteLine(" Buffer size: " + pingTask.Result.Buffer.Length);
-                        Console.ResetColor();
-                    }
+                    x = x + 1;
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(" Server: {0}", root["servers"][x]["name"]);
+                    Console.WriteLine(" Url: {0}", root["servers"][x]["url"]);
+                    Console.WriteLine(" Status: {0}", pingTask.Result.Status);
+                    Console.WriteLine(" Roundtrip Time: {0}", pingTask.Result.RoundtripTime);
+                    Console.WriteLine(" Time to live: {0}", pingTask.Result.Options.Ttl);
+                    Console.WriteLine(" Buffer size: {0}", pingTask.Result.Buffer.Length);
+                    Console.ResetColor();
                     Console.WriteLine();
                 }
                 Console.WriteLine(" Scroll Up To See All Servers.");
                 Console.WriteLine();
-                Console.WriteLine(" Press any key to close.");
+                Console.WriteLine(" Press [Space] key to close.");
                 Console.ReadLine();
             }
-            catch
+            catch (Exception e)
             {
-                Console.WriteLine("An error has occured.");
+                /*
+                 * Disabled for production due to
+                 * An error that occurs randomly.
+                 * 
+                var ST = new StackTrace(e, true);
+                var STframe = ST.GetFrame(0);
+                var STLine = STframe.GetFileLineNumber();
+                Console.WriteLine("An error occured.");
+                Console.WriteLine("Message: {0}", e.Message);
+                Console.WriteLine("Stack Trace: {0}", e.StackTrace);
+                Console.WriteLine("Source: {0}", e.Source);
+                Console.WriteLine("TargetSite: {0}", e.TargetSite);
+                Console.WriteLine("InnerException: {0}", e.InnerException);
+                Console.WriteLine("Stack Trace Line Number: {0}", STLine);
+                Console.WriteLine();*/
             }
             Console.ReadKey();
         }
