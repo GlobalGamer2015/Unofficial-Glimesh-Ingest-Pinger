@@ -8,3 +8,16 @@ C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\
 C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.csproj.CopyComplete
 C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.exe
 C:\Users\dpipe\source\repos\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.pdb
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Unofficial Glimesh OBS Ingest Pinger.exe.config
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Unofficial Glimesh OBS Ingest Pinger.exe.manifest
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Unofficial Glimesh OBS Ingest Pinger.application
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Unofficial Glimesh OBS Ingest Pinger.exe
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Newtonsoft.Json.dll
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\bin\Debug\Newtonsoft.Json.xml
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.csprojAssemblyReference.cache
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.csproj.CoreCompileInputs.cache
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Unofficial Glimesh OBS Ingest Pinger.TrustInfo.xml
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Unofficial Glimesh OBS Ingest Pinger.exe.manifest
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Unofficial Glimesh OBS Ingest Pinger.application
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Glimesh OBS Ingest Pinger.csproj.CopyComplete
+C:\Github\Unofficial-Glimesh-Ingest-Pinger-main\src\Glimesh OBS Ingest Pinger\Glimesh OBS Ingest Pinger\obj\Debug\Unofficial Glimesh OBS Ingest Pinger.exe
